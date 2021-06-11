@@ -2,34 +2,35 @@
 
 \ustcsetup{
   keywords = {
-    中国科学技术大学, 学位论文, \LaTeX{} 模板, 学士, 硕士, 博士
+    显著性检测, ffmpeg, poolnet, libtorch
   },
   keywords* = {
-    University of Science and Technology of China (USTC), Thesis,
-    \LaTeX{} Template, Bachelor, Master, PhD
+    saliency detection, ffmpeg, poolnet, libtorch
   },
 }
 
 \begin{abstract}
-  摘要分中文和英文两种，中文在前，英文在后，博士论文中文摘要一般 800～1500 个汉字，硕士论文中文摘要一般 500～1000 个汉字。
-  英文摘要的篇幅参照中文摘要。
 
-  关键词另起一行并隔行排列于摘要下方，左顶格，中文关键词间空一字或用分号“，”隔开，英文关键词之间用逗号“,”或分号“;”隔开。
+FFmpeg作为先进的跨平台的开源视频处理软件，正在越来越多地被使用。但其缺少对显著性检测的支持，难以实现与显著性检测等常用图像处理算法的结合。
+随着 GPU 的飞速发展，大量优秀的基于神经网络的图像处理算法也纷纷涌现。如果能够实现这些算法与FFmpeg的结合，可以充分拓展FFmpeg的应用场景。
+本文旨在探究在FFmpeg中嵌入神经网络算法的可行途径，并嵌入显著性检测算法。但 FFmpeg 源码工程量巨大，每次测试编译，时间久，效率低。
+本文提出了一种巧妙的办法，将神经网络算法嵌入FFmpeg的播放工具ffplay中并单独编译。
+实验结果显示可以正常运行，速度可达12fps，并且此方法通用性较好，亦可适用于其他基于神经网络的图像处理算法。
+工程代码地址在 \url{https://github.com/hanjialeOK/YOLOv3-in-FFmpeg/tree/saliency}
 
-  中文摘要是论文内容的总结概括，应简要说明论文的研究目的、基本研究内容、研究方法或过程、结果和结论，突出论文的创新之处。
-  摘要应具有独立性和自明性，即不用阅读全文，就能获得论文必要的信息。
-  摘要中不宜使用公式、图表，不引用文献。
-
-  中文关键词是为了文献标引工作从论文中选取出来用以表示全文主题内容信息的单词和术语，一般 3～8 个词，要求能够准确概括论文的核心内容。
 \end{abstract}
 
 \begin{abstract*}
-  This is a sample document of USTC thesis \LaTeX{} template for bachelor,
-  master and doctor. The template is created by zepinglee and seisman, which
-  orignate from the template created by ywg. The template meets the
-  equirements of USTC theiss writing standards.
 
-  This document will show the usage of basic commands provided by \LaTeX{} and
-  some features provided by the template. For more information, please refer to
-  the template document ustcthesis.pdf.
+As an advanced cross-platform and open-source video processing software, FFmpeg is being used more and more widely. 
+However, it lacks the support of saliency detection, so it is difficult to combine with saliency detection and other common image processing algorithms. 
+With the rapid development of GPU, a large number of excellent image processing algorithms based on neural network have emerged. 
+If these algorithms can be combined with FFmpeg, the application of FFmpeg can be fully expanded. 
+This paper aims to explore the feasible way of putting neural network algorithm in FFmpeg, such as the saliency detection. 
+But the source code of FFmpeg is a huge amount of work, each test compilation would take a long time with low efficiency. 
+This paper presents an ingenious method, which embeds the neural network algorithm into ffplay and compiles it separately. 
+The experimental result show that the system can operate normally, and the speed can reach 12 fps. 
+In addition, This method has good generality and can also be applied to other image processing algorithms based on neural network.
+Code can be found at \url{https://github.com/hanjialeOK/YOLOv3-in-FFmpeg/tree/saliency}.
+
 \end{abstract*}

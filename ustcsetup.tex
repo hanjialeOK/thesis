@@ -1,15 +1,14 @@
 % !TeX root = ./main.tex
 
 \ustcsetup{
-  title              = {中国科学技术大学\\学位论文模板示例文档 \ustcthesisversion},
-  title*             = {An example of thesis template for University of Science
-                        and Technology of China \ustcthesisversion},
-  author             = {李泽平},
-  author*            = {Li Zeping},
-  speciality         = {数学与应用数学},
-  speciality*        = {Mathematics and Applied Mathematics},
-  supervisor         = {XXX~教授, XXX~教授},
-  supervisor*        = {Prof. XXX, Prof. XXX},
+  title              = {视频显著性检测及其FFmpeg集成},
+  title*             = {Video Saliency Detection and its application in FFmpeg},
+  author             = {韩佳乐},
+  author*            = {Han Jiale},
+  speciality         = {计算机科学与技术},
+  speciality*        = {Computer Science and Technology},
+  supervisor         = {陈晓辉,尹华锐},
+  supervisor*        = {Associate Prof. Chen Xiaohui,Associate Prof. Yin Huarui},
   % date               = {2017-05-01},  % 默认为今日
   % professional-type  = {专业学位类型},
   % professional-type* = {Professional degree type},
@@ -85,6 +84,41 @@
 \DeclareRobustCommand\cs[1]{\texttt{\char`\\#1}}
 \DeclareRobustCommand\pkg{\textsf}
 \DeclareRobustCommand\file{\nolinkurl}
+
+% 插入代码
+\usepackage{listings}
+% 颜色
+\usepackage{xcolor}
+\usepackage{color}
+
+% 代码块设置
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+	language=Java, % 使用的语言
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false, % 仅在字符串中允许空格
+	backgroundcolor=\color{white},   % 选择代码背景，必须加上\ usepackage {color}或\ usepackage {xcolor}
+	columns=flexible,
+	basicstyle = \ttfamily\small,
+	numbers=none, % 给代码添加行号，可取值none, left, right.
+	numberstyle=\small \color{gray},  % 行号的字号和颜色
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen}, % 设置注释格式
+	stringstyle=\color{mauve},
+	breaklines=true,   % 设置自动断行.
+	breakatwhitespace=false, % 设置是否当且仅当在空白处自动中断.
+	escapeinside=``, %逃逸字符(1左面的键)，用于显示中文
+	frame=single, %设置边框格式
+	extendedchars=false, %解决代码跨页时，章节标题，页眉等汉字不显示的问题
+	xleftmargin=2em,xrightmargin=2em, aboveskip=1em, %设置边距
+	tabsize=4 % 将默认tab设置为4个空格
+}
+
+% 并排插入图片
+\usepackage{subcaption}
 
 % hyperref 宏包在最后调用
 \usepackage{hyperref}
